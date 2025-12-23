@@ -19,8 +19,7 @@ AI agents must read and follow this document before generating, modifying, or re
 ## JavaScript Organization
 - **Use ES6 modules** (`import` / `export`) for all JavaScript code.
 - Do not use global variables or attach functionality to `window` unless explicitly required.
-- Organize code into small, purpose-driven modules.
-- Avoid monolithic files when logical separation is possible.
+- Use addEventListener for attaching event handlers. Do not use inline HTML event attributes (onclick, onchange, etc.).
 
 ---
 
