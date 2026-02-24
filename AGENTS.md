@@ -32,13 +32,13 @@ DOM & HTML Generation
 
 **Bad (String Injection):**
 
-``// ❌ Fails on quotes & requires JSON escaping  
-div.innerHTML = `Save`;   ``
+`// ❌ Fails on quotes & requires JSON escaping `
+``div.innerHTML = `Save`;   ``
 
 **Good (Programmatic):**
 
-`// ✅ Safe, supports all characters, preserves closure scope  
-const btn = document.createElement('button');  btn.textContent = 'Save';  btn.onclick = () => save(name);   div.appendChild(btn);   `
+`// ✅ Safe, supports all characters, preserves closure scope`  
+`const btn = document.createElement('button');  btn.textContent = 'Save';  btn.onclick = () => save(name);   div.appendChild(btn);   `
 
 JavaScript Organization
 -----------------------
