@@ -32,15 +32,11 @@ DOM & HTML Generation
 
 **Bad (String Injection):**
 
-JavaScript
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML``   // ❌ Fails on quotes & requires JSON escaping  div.innerHTML = `Save`;   ``
+`// ❌ Fails on quotes & requires JSON escaping  div.innerHTML = `Save`;   ``
 
 **Good (Programmatic):**
 
-JavaScript
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   // ✅ Safe, supports all characters, preserves closure scope  const btn = document.createElement('button');  btn.textContent = 'Save';  btn.onclick = () => save(name);   div.appendChild(btn);   `
+`// ✅ Safe, supports all characters, preserves closure scope  const btn = document.createElement('button');  btn.textContent = 'Save';  btn.onclick = () => save(name);   div.appendChild(btn);   `
 
 JavaScript Organization
 -----------------------
